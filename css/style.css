@@ -34,7 +34,6 @@ body {
   height: 100%;
   float: left;
   border-right: 1px solid #B1B1B1;
-
 }
 
 #chat-container {
@@ -119,23 +118,27 @@ body {
 img {
   height: 45px;
   margin-right: 15px;
-
 }
 
 #notifications span {
   display: inline-block;
   text-decoration: underline;
   color: #789193;
-
 }
 
-li {
+#contact-top li,
+#chat-top li {
   display: inline-block;
   color: #B1B1B1;
   list-style-type: none;
   padding-right: 10px;
   font-size: 24px;
 }
+
+#contacts-list li {
+  list-style-type: none;
+}
+
 
 #chat-bottom i {
     color: #6C7376;
