@@ -95,19 +95,19 @@ data:{
 			}
 		],
 	},
-]
+],
 
+newMessage : "",
+messages:[]
 
+},
 
-
-
-
-}
-
-
-
-
-
-
-
+  methods:{
+    SendMessage: function () {
+      this.messages.push({
+      text: this.newMessage
+      })
+      this.newMessage = " "
+    }
+  }
 })

@@ -65,6 +65,18 @@ body {
   height: calc(100% - 120px);
   overflow-y: scroll;
   border-right: 15px solid #F3EEEa;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+#chat-main li {
+  list-style-type: none;
+  margin: 30px 45px 5px 45px;
+  padding: 15px 40px 15px 15px;
+  border-radius: 5px;
+  background-color: #D5F9BA;
+
 }
 
 #chat-bottom {
@@ -76,12 +88,16 @@ body {
   padding: 15px;
 }
 
-#chat-bottom input {
+#chat-bottom form{
   width: 80%;
+}
+
+#chat-bottom input {
+  width: 100%;
   height: 35px;
-  padding: 10px;
   border: 1px solid white;
   border-radius: 4px;
+  padding-left: 8px;
 }
 
 #contact-top {
@@ -137,6 +153,7 @@ img {
 #contacts-list li {
   list-style-type: none;
   padding: 10px;
+  cursor:pointer;
 
 }
 #contacts-list-flex {

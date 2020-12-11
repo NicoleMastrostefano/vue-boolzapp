@@ -69,13 +69,20 @@
               <li><i class="fas fa-ellipsis-v"></i></li>
             </ul>
           </div>
-
           <div id="chat-main">
+            <ul>
+              <li v-for="message in messages":key="message.id">
+              <span>{{message.text}}</span>
+              </li>
+            </ul>
           </div>
-
           <div id="chat-bottom">
             <i class="far fa-smile"></i>
-            <input type="text" name="" value="">
+            <form @submit.prevent="SendMessage">
+            <input type="text"
+            v-model ="newMessage"
+            placeholder="Scrivi un messaggio">
+            </form>
             <i class="fas fa-microphone"></i>
           </div>
         </div>
