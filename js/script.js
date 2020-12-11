@@ -4,8 +4,8 @@ data:{
   contacts: [
 	{
 		name: 'Michele',
-		avatar: '_1',
-		visible: true,
+		avatar: "img/avatar-2.png",
+		// visible: true,
 		messages: [
 			{
 				date: '10/01/2020 15:30:55',
@@ -26,8 +26,8 @@ data:{
 	},
 	{
 		name: 'Fabio',
-		avatar: '_2',
-		visible: true,
+		avatar: "img/avatar3.png",
+		// visible: true,
 		messages: [
 			{
 				date: '20/03/2020 16:30:00',
@@ -48,8 +48,8 @@ data:{
 	},
 	{
 		name: 'Samuele',
-		avatar: '_3',
-		visible: true,
+		avatar: 'img/avatar5.png',
+		// visible: true,
 		messages: [
 			{
 				date: '28/03/2020 10:10:40',
@@ -70,8 +70,8 @@ data:{
 	},
 	{
 		name: 'Luisa',
-		avatar: '_4',
-		visible: true,
+		avatar: 'img/avatar4.png',
+		// visible: true,
 		messages: [
 			{
 				date: '10/01/2020 15:30:55',

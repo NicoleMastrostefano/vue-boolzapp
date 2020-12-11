@@ -34,6 +34,7 @@ body {
   height: 100%;
   float: left;
   border-right: 1px solid #B1B1B1;
+  background-color: white;
 }
 
 #chat-container {
@@ -98,8 +99,6 @@ body {
   align-items: center;
 }
 
-
-
 #notifications {
   width: 100%;
   background-color: #8EDAFD;
@@ -137,10 +136,24 @@ img {
 
 #contacts-list li {
   list-style-type: none;
+  padding: 10px;
+
+}
+#contacts-list-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
+#contacts-list ul {
+  width: 100%;
+}
 
 #chat-bottom i {
-    color: #6C7376;
-    font-size: 24px;
+  color: #6C7376;
+  font-size: 24px;
 }
+
+#name-avatar {
+    display: flex;
+  }

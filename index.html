@@ -13,7 +13,7 @@
         <div id="contacts-container">
           <div id="contact-top">
             <div id="user-profile-box">
-              <img src="img/avatar1.png" alt=""><h4>Nome utente</h4>
+              <img src="img/avatar1.png" alt=""><h4>Nicole</h4>
             </div>
             <ul>
               <li>
@@ -38,10 +38,22 @@
            Cerca o inizia una nuova chat">
           <div id="contacts-list">
             <ul>
-              <li v-for= "contact in contacts ":key="contact.name">{{contact.name}}</li>
+              <li v-for="(contact, index) in contacts">
+                <div id="contacts-list-flex">
+                  <div id="name-avatar">
+                    <img v-bind:src="contact.avatar" alt="">
+                  <div>
+                    <h4>{{contact.name}}</h4>
+                    <small>messaggi dell'utente</small>
+                  </div>
+                  </div>
+                  <small>ultimo accesso</small>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
+
         <div id="chat-container">
           <div id="chat-top">
             <div id="chat-top-avatar">
