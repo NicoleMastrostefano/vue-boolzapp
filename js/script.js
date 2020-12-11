@@ -30,7 +30,7 @@ data:{
 	{
 		name: 'Fabio',
 		avatar: "img/avatar3.png",
-    text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+    text: 'Mi piacerebbe ma devo andare...',
     date: '20/03/2020 16:35:00',
 
 		// visible: true,
@@ -98,7 +98,8 @@ data:{
 ],
 
 newMessage : "",
-messages:[]
+messages:[],
+activeUser: 0,
 
 },
 

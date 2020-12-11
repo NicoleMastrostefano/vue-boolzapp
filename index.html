@@ -38,7 +38,7 @@
            Cerca o inizia una nuova chat">
           <div id="contacts-list">
             <ul>
-              <li v-for="(contact, index) in contacts">
+               <li v-for="(contact, index) in contacts"  @click="activeUser = index" :class="(activeUser == index) ? 'activeUser' : 'user'">
                 <div id="contacts-list-flex">
                   <div id="name-avatar">
                     <img v-bind:src="contact.avatar" alt="">
@@ -56,11 +56,11 @@
 
         <div id="chat-container">
           <div id="chat-top">
-            <div id="chat-top-avatar">
-              <img src="img/avatar-2.png" alt="">
+            <div id="chat-top-avatar" v-for="(contact, index) in contacts" v-if="(activeUser == index)">
+                <img v-bind:src="contact.avatar" alt="">
               <div>
-              <h4>Michele</h4>
-              <small>Ultimo accesso oggi alle 16:30</small>
+              <h4>{{contact.name}}</h4>
+              <small>Ultimo accesso {{ contact.date }}</small>
               </div>
             </div>
             <ul>
