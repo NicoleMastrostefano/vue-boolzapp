@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+}
+
+#bg {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #009688 0px, #009688 17vh, #DCDBD2 17vh, #D2DBDC 100vh);
+  display: flex;
+}
+
+#container {
+  width: 80vw;
+  height: 95vh;
+  background-color: #EAEAEA;
+  margin: auto;
+}
+
+#contacts-container{
+  width: 35%;
+  height: 100%;
+  float: left;
+  display: flex;
+}
+
+#chat-container {
+  width: calc(100% - 35%);
+  height: 100%;
+  float: right;
+  background-image:url("../img/bool.png");
+  background-size: contain;
+}
+#chat-top {
+  height: 60px;
+  background-color: #EAEAEA;
+}
+
+#chat-main {
+  width: 100%;
+  height: calc(100% - 120px);
+  overflow-y: scroll;
+  border-right: 15px solid #F3EEEa;
+}
+
+#chat-bottom {
+  height: 60px;
+  background-color: #F3EEEA;
+}
