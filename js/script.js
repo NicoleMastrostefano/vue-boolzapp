@@ -5,6 +5,9 @@ data:{
 	{
 		name: 'Michele',
 		avatar: "img/avatar-2.png",
+    text: 'Tutto fatto!',
+    date: '10/01/2020 16:15:22',
+
 		// visible: true,
 		messages: [
 			{
@@ -27,6 +30,9 @@ data:{
 	{
 		name: 'Fabio',
 		avatar: "img/avatar3.png",
+    text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+    date: '20/03/2020 16:35:00',
+
 		// visible: true,
 		messages: [
 			{
@@ -49,6 +55,8 @@ data:{
 	{
 		name: 'Samuele',
 		avatar: 'img/avatar5.png',
+    text: 'Ah scusa!',
+    date: '28/03/2020 16:15:22',
 		// visible: true,
 		messages: [
 			{
@@ -71,6 +79,8 @@ data:{
 	{
 		name: 'Luisa',
 		avatar: 'img/avatar4.png',
+    text: 'Si, ma preferirei andare al cinema',
+    date: '10/01/2020 15:50:00',
 		// visible: true,
 		messages: [
 			{
