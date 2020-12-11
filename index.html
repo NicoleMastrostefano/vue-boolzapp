@@ -2,19 +2,63 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title></title>
   </head>
   <body>
     <div id="bg">
-      <div id="container">
+      <div id="container"class="clearfix">
         <div id="contacts-container">
+          <div id="contact-top">
+            <div id="user-profile-box">
+              <img src="img/avatar1.png" alt=""><h4>Nome utente</h4>
+            </div>
+            <ul>
+              <li>
+                <i class="fas fa-circle-notch"></i>
+              </li>
+              <li>
+                <i class="fas fa-comment-alt"></i>
+              </li>
+              <li>
+                <i class="fas fa-ellipsis-v"></i>
+              </li>
+            </ul>
+
+        </div>
+        <div id="notifications">
+          <img src="img/notify-icon.png" alt="">
+            <div class="">
+
+
+            <p>Ricevi notifiche di nuovi messaggi</p>
+            <span>Attiva notifiche desktop</span>
+
+          </div>
+
+
+          </div>
+
+          <input type="text" placeholder="	&#128269;
+           Cerca o inizia una nuova chat">
 
         </div>
         <div id="chat-container">
           <div id="chat-top">
-
+            <div id="chat-top-avatar">
+              <img src="img/avatar-2.png" alt="">
+              <div>
+              <h4>Michele</h4>
+              <small>Ultimo accesso oggi alle 16:30</small>
+              </div>
+            </div>
+            <ul>
+              <li><i class="fas fa-search"></i></li>
+              <li><i class="fas fa-paperclip"></i></li>
+              <li><i class="fas fa-ellipsis-v"></i></li>
+            </ul>
           </div>
           <div id="chat-main">
 
@@ -25,5 +69,6 @@
         </div>
       </div>
     </div>
+    <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
