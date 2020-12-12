@@ -31,23 +31,25 @@
           <img src="img/notify-icon.png" alt="">
             <div class="">
               <p>Ricevi notifiche di nuovi messaggi</p>
-              <span>Attiva notifiche desktop</span>
+              <a href="#">Attiva notifiche desktop</a>
             </div>
           </div>
           <input type="text" placeholder="	&#128269;
            Cerca o inizia una nuova chat">
           <div id="contacts-list">
             <ul>
-               <li v-for="(contact, index) in contacts"  @click="activeUser = index" :class="(activeUser == index) ? 'activeUser' : 'user'">
+               <li v-for="(contact, index) in contacts"
+               @click="activeUser = index"
+               v-bind:class="(activeUser == index) ? 'activeUser' : 'user'">
                 <div id="contacts-list-flex">
                   <div id="name-avatar">
                     <img v-bind:src="contact.avatar" alt="">
                   <div>
-                    <h4>{{contact.name}}</h4>
-                    <small>{{contact.text}}</small>
+                    <h4>{{ contact.name }}</h4>
+                    <small>{{ contact.text }}</small>
                   </div>
                   </div>
-                  <small>{{contact.date}}</small>
+                  <small>{{ contact.date }}</small>
                 </div>
               </li>
             </ul>
@@ -59,7 +61,7 @@
             <div id="chat-top-avatar" v-for="(contact, index) in contacts" v-if="(activeUser == index)">
                 <img v-bind:src="contact.avatar" alt="">
               <div>
-              <h4>{{contact.name}}</h4>
+              <h4>{{ contact.name }}</h4>
               <small>Ultimo accesso {{ contact.date }}</small>
               </div>
             </div>
@@ -72,7 +74,7 @@
           <div id="chat-main">
             <ul>
               <li v-for="message in messages":key="message.id">
-              <span>{{message.text}}</span>
+              <span>{{ message.text }}</span>
               </li>
             </ul>
           </div>

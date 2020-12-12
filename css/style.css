@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: Helvetica, sans-serif;
-    font-size: 14px;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 #bg {
@@ -59,7 +59,6 @@ body {
   align-items: center;
 }
 
-
 #chat-main {
   width: 100%;
   height: calc(100% - 120px);
@@ -68,7 +67,6 @@ body {
   display: flex;
   justify-content: flex-end;
 }
-
 
 #chat-main li {
   list-style-type: none;
@@ -135,9 +133,7 @@ img {
   margin-right: 15px;
 }
 
-#notifications span {
-  display: inline-block;
-  text-decoration: underline;
+#notifications a {
   color: #789193;
 }
 
@@ -154,8 +150,8 @@ img {
   list-style-type: none;
   padding: 10px;
   cursor:pointer;
-
 }
+
 #contacts-list-flex {
   display: flex;
   align-items: flex-start;
@@ -172,5 +168,5 @@ img {
 }
 
 #name-avatar {
-    display: flex;
-  }
+  display: flex;
+}
