@@ -106,10 +106,10 @@ data:{
   methods:{
     SendMessage: function () {
       this.messages.push({
-      text: this.newMessage
+      text: this.newMessage,
+      date: moment()
       })
       this.newMessage = " "
-
     },
   }
 })

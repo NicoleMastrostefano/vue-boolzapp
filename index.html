@@ -84,7 +84,7 @@
             <div class="newMsg" v-for="message in messages">
               <!-- v-if="?" -->
               <span>{{ message.text }}
-               <time>Data e orario corrente</time>
+               <time>{{message.date.format("kk:mm")}}</time>
              </span>
             </div>
           </div>
