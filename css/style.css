@@ -16,7 +16,7 @@ body {
   display: flex;
 }
 
-.clearfix {
+.clearfix::after {
   content: '';
   display: table;
   clear: both;
@@ -77,6 +77,7 @@ body {
   border-radius: 5px;
   background-color: #D5F9BA;
   position: relative;
+  box-shadow: -1px 1px rgba(0.5, 0.5, 0.5, 0.1);
 }
 
 #chat-bottom {
@@ -88,7 +89,7 @@ body {
   padding: 15px;
 }
 
-#chat-bottom form{
+#chat-bottom form {
   width: 80%;
 }
 
@@ -154,6 +155,7 @@ img {
   cursor:pointer;
 }
 
+#contacts-list time,
 #contacts-list small {
   color: #789193;
 }
@@ -189,7 +191,7 @@ img {
   float:left;
 }
 
-.newMsg span{
+.newMsg span {
   float: right;
   word-break: break-all;
 }
@@ -202,9 +204,45 @@ img {
   background-color: #D5F9BA;
 }
 
-#chat-main .newMsg small,
-#chat-main .message small{
+.newMsg span::after,
+#chat-main .message > .sent::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: #D5F9BA;
+	border-bottom: 0;
+	margin-left: 80px;
+	margin-bottom: -10px;
+  filter: drop-shadow(1px 1px rgba(0.5, 0.5, 0.5, 0.1));
+}
+
+#chat-main .message > .received:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color:white;
+	border-top: 0;
+	margin-left: -100px;
+	margin-top: -10px;
+  filter: drop-shadow(-1px -1px rgba(0.5, 0.5, 0.5, 0.1));
+}
+
+time {
+font-size: 10px;
+}
+
+#chat-main .newMsg time,
+#chat-main .message time {
   position: absolute;
   left: 180px;
   font-size: 10px;
+  display: block;
 }

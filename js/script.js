@@ -97,9 +97,9 @@ data:{
 	},
 ],
 
-newMessage : "",
-messages:[],
-activeUser: 0,
+  newMessage : "",
+  messages:[],
+  activeUser: 0,
 
 },
 
@@ -109,7 +109,7 @@ activeUser: 0,
       text: this.newMessage
       })
       this.newMessage = " "
-    },
 
+    },
   }
 })
