@@ -5,21 +5,21 @@
 }
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 14px;
 }
 
 #bg {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to bottom, #009688 0px, #009688 17vh, #DCDBD2 17vh, #D2DBDC 100vh);
+  background-image: linear-gradient(to bottom, #009688 0px, #009688 15vh, #DCDBD2 15vh, #D2DBDC 100vh);
   display: flex;
 }
 
 .clearfix {
-    content: '';
-    display: table;
-    clear: both;
+  content: '';
+  display: table;
+  clear: both;
 }
 
 #container {
@@ -65,16 +65,18 @@ body {
   overflow-y: scroll;
   border-right: 15px solid #F3EEEa;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
 }
 
-#chat-main li {
+#chat-main .newMsg span,
+#chat-main .message div {
+  width: 280px;
   list-style-type: none;
   margin: 30px 45px 5px 45px;
   padding: 15px 40px 15px 15px;
   border-radius: 5px;
   background-color: #D5F9BA;
-
+  position: relative;
 }
 
 #chat-bottom {
@@ -152,6 +154,10 @@ img {
   cursor:pointer;
 }
 
+#contacts-list small {
+  color: #789193;
+}
+
 #contacts-list-flex {
   display: flex;
   align-items: flex-start;
@@ -169,4 +175,36 @@ img {
 
 #name-avatar {
   display: flex;
+}
+
+.activeUser {
+  background-color: lightgrey;
+}
+
+.sent {
+  float: right;
+}
+
+.message .received {
+  float:left;
+}
+
+.newMsg span{
+  float: right;
+  word-break: break-all;
+}
+
+#chat-main .message > .received {
+  background-color: white;
+}
+
+#chat-main .message > .sent {
+  background-color: #D5F9BA;
+}
+
+#chat-main .newMsg small,
+#chat-main .message small{
+  position: absolute;
+  left: 180px;
+  font-size: 10px;
 }

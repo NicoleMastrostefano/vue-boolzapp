@@ -109,6 +109,7 @@ activeUser: 0,
       text: this.newMessage
       })
       this.newMessage = " "
-    }
+    },
+
   }
 })

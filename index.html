@@ -2,7 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title></title>
@@ -71,12 +73,19 @@
               <li><i class="fas fa-ellipsis-v"></i></li>
             </ul>
           </div>
-          <div id="chat-main">
-            <ul>
-              <li v-for="message in messages":key="message.id">
+          <div id="chat-main"class="clearfix">
+            <div class="message" v-for="message in contacts[activeUser].messages">
+              <div :class="(message.status == 'sent') ? 'sent' : 'received'">
+                <p>{{ message.text }}</p>
+                <small>{{ message.date }}</small>
+              </div>
+            </div>
+
+              <div class="newMsg"v-for="message in messages">
               <span>{{ message.text }}</span>
-              </li>
-            </ul>
+              <small>{{  }}</small>
+            </div>
+
           </div>
           <div id="chat-bottom">
             <i class="far fa-smile"></i>
