@@ -101,7 +101,7 @@ data:{
 
 
   methods:{
-
+    // funzione invio messaggio
     SendMessage: function () {
       this.contacts[this.activeUser].messages.push({
       text: this.newMessage,
@@ -112,6 +112,7 @@ data:{
       this.SendAnswer()
     },
 
+    // funzione invio risposta
     SendAnswer: function () {
       var thisContact = this.contacts[this.activeUser]
       setTimeout(function () {
@@ -127,7 +128,9 @@ data:{
     }
   },
 
-  computed:{
+
+  computed: {
+    // funzione search
     filteredContact:function(){
       return this.contacts.filter((el,name)=> {
         return el.name.toLowerCase().match(this.search)
