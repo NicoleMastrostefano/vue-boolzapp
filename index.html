@@ -41,7 +41,7 @@
           Cerca o inizia una nuova chat">
           <div id="contacts-list">
             <ul>
-              <li  v-for="(contact, index) in contacts"
+              <li  v-for="(contact, index) in filteredContact"
               @click="activeUser = index"
               v-bind:class="(activeUser == index) ? 'activeUser' : 'null'">
                 <div id="contacts-list-flex">

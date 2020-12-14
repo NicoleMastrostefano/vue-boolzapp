@@ -100,6 +100,7 @@ data:{
   search:"",
 },
 
+
   methods:{
     SendMessage: function () {
       this.contacts[this.activeUser].messages.push({
@@ -108,10 +109,10 @@ data:{
       status:'sent',
       })
       this.newMessage = " "
-      this.sayOk()
+      this.SendAnswer()
     },
 
-    sayOk: function () {
+    SendAnswer: function () {
       var thisContact = this.contacts[this.activeUser]
       setTimeout(function () {
         thisContact.messages.push({
@@ -119,11 +120,19 @@ data:{
         status:'received',
         date: moment().format("MM/DD/YYYY HH:mm:ss")
       });
-    }, 1500);
+      }, 1500);
     },
       mounted () {
-      this.sayOk()
+      this.SendAnswer()
     }
-  }
+  },
+
+  computed:{
+    filteredContact:function(){
+      return this.contacts.filter((el,name)=> {
+        return el.name.toLowerCase().match(this.search)
+      });
+    }
+  },
 }
 )
