@@ -108,7 +108,22 @@ data:{
       status:'sent',
       })
       this.newMessage = " "
+      this.sayOk()
     },
+
+    sayOk: function () {
+      var thisContact = this.contacts[this.activeUser]
+      setTimeout(function () {
+        thisContact.messages.push({
+        text:"ok",
+        status:'received',
+        date: moment().format("MM/DD/YYYY HH:mm:ss")
+      });
+    }, 1500);
+    },
+      mounted () {
+      this.sayOk()
+    }
   }
 }
 )
