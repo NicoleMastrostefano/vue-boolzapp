@@ -37,7 +37,7 @@
               <a href="#">Attiva notifiche desktop</a>
             </div>
           </div>
-          <input v-model = "search"type="text" placeholder="	&#128269;
+          <input v-model = "search" type="text" placeholder="	&#128269;
           Cerca o inizia una nuova chat">
           <div id="contacts-list">
             <ul>
@@ -75,10 +75,15 @@
             </ul>
           </div>
           <div id="chat-main"class="clearfix">
-            <div class="message" v-for="message in contacts[activeUser].messages">
+            <div class="message"v-for="message in contacts[activeUser].messages"v-on:click="">
               <div :class="(message.status == 'sent') ? 'sent' : 'received'">
                 <p>{{ message.text }}</p>
                 <time>{{ message.date }}</time>
+                <span><i class="fas fa-angle-down"></i></span>
+                <span class="dropdown">
+                  <small>info messaggio</small>
+                  <small>cancella messaggio</small>
+                </span>
               </div>
             </div>
           </div>

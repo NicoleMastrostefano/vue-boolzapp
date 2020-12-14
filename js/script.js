@@ -94,7 +94,6 @@ data:{
 		],
 	},
 ],
-
   newMessage : "",
   activeUser: 0,
   search:"",
@@ -102,6 +101,7 @@ data:{
 
 
   methods:{
+
     SendMessage: function () {
       this.contacts[this.activeUser].messages.push({
       text: this.newMessage,
