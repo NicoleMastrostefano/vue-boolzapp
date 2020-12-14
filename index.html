@@ -37,11 +37,11 @@
               <a href="#">Attiva notifiche desktop</a>
             </div>
           </div>
-          <input type="text" placeholder="	&#128269;
+          <input v-model = "search"type="text" placeholder="	&#128269;
           Cerca o inizia una nuova chat">
           <div id="contacts-list">
             <ul>
-              <li v-for="(contact, index) in contacts"
+              <li  v-for="(contact, index) in contacts"
               @click="activeUser = index"
               v-bind:class="(activeUser == index) ? 'activeUser' : 'null'">
                 <div id="contacts-list-flex">
@@ -80,12 +80,6 @@
                 <p>{{ message.text }}</p>
                 <time>{{ message.date }}</time>
               </div>
-            </div>
-            <div class="newMsg" v-for="message in chat">
-              <!-- v-if="selezionare activeUser" -->
-              <span>{{ message.text }}
-              <time>{{ message.date.format("kk:mm")}}</time>
-             </span>
             </div>
           </div>
           <div id="chat-bottom">

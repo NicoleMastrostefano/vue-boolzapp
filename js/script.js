@@ -96,19 +96,19 @@ data:{
 ],
 
   newMessage : "",
-  chat:[],
   activeUser: 0,
-
+  search:"",
 },
 
   methods:{
     SendMessage: function () {
-      this.chat.push({
+      this.contacts[this.activeUser].messages.push({
       text: this.newMessage,
-      date: moment(),
+      date: moment().format("MM/DD/YYYY HH:mm:ss"),
+      status:'sent',
       })
       this.newMessage = " "
-
     },
   }
-})
+}
+)
