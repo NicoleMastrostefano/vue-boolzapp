@@ -255,18 +255,39 @@ time {
   left:260px;
   top: calc(100% - 30px - 15px);
   color:#EAEAEA;
+  opacity: 0.5;
+  cursor:pointer;
+
+}
+.message i:hover{
+  color: black;
 }
 
 .dropdown {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px;
   position: absolute;
-  width: 100px;
-  height: 70px;
+  width: 130px;
+  height: 90px;
   background-color: white;
-  opacity:0.3;
   right:10px;
-  top: calc(100% - 30px - 15px);
-  z-index: 1;
+  top: calc(100% - 35px);
+  z-index: 2;
   border: 1px solid #F2F2F2;
-  border-radius: 5px;
-}
+  border-radius: 2px;
+ }
+
+ .dropdown small {
+   cursor: pointer;
+ }
+
+ .fade-enter-active, .fade-leave-active {
+   transition: 0.5s;
+ }
+
+ .fade-enter, .fade-leave-to {
+   opacity: 0;
+ }

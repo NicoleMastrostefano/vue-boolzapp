@@ -6,7 +6,7 @@ data:{
 		name: 'Michele',
 		avatar: "img/avatar-2.png",
     text: 'Tutto fatto!',
-    date: '10/01/2020 16:15:22',
+    lastDate: '10/01/2020 16:15:22',
 		visible: true,
 		messages: [
 			{
@@ -30,7 +30,7 @@ data:{
 		name: 'Fabio',
 		avatar: "img/avatar3.png",
     text: 'Mi piacerebbe ma devo andare...',
-    date: '20/03/2020 16:35:00',
+    lastDate: '20/03/2020 16:35:00',
 		visible: true,
 		messages: [
 			{
@@ -54,7 +54,7 @@ data:{
 		name: 'Samuele',
 		avatar: 'img/avatar5.png',
     text: 'Ah scusa!',
-    date: '28/03/2020 16:15:22',
+    lastDate: '28/03/2020 16:15:22',
 		visible: true,
 		messages: [
 			{
@@ -78,7 +78,7 @@ data:{
 		name: 'Luisa',
 		avatar: 'img/avatar4.png',
     text: 'Si, ma preferirei andare al cinema',
-    date: '10/01/2020 15:50:00',
+    lastDate: '10/01/2020 15:50:00',
 		visible: true,
 		messages: [
 			{
@@ -97,6 +97,7 @@ data:{
   newMessage : "",
   activeUser: 0,
   search:"",
+  show:false
 },
 
 
@@ -111,6 +112,22 @@ data:{
       this.newMessage = " "
       this.SendAnswer()
     },
+
+    // funzione per cancellare messaggi dalla chat e dalla lista contatti
+    remove: function (index,i) {
+      var thisContact = this.contacts[this.activeUser]
+      thisContact.messages.splice(i,1);
+        if (thisContact.messages.length >= 1) {
+          thisContact
+        } else {
+        thisContact.text = ' ';
+        thisContact.lastDate = ' ';
+        }
+    },
+    // fare una funzione delete for each
+
+
+
 
     // funzione invio risposta
     SendAnswer: function () {

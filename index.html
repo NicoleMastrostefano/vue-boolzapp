@@ -54,7 +54,7 @@
                     <small>{{ contact.text }}</small>
                   </div>
                   </div>
-                  <time>{{ contact.date }}</time>
+                  <time>{{ contact.lastDate }}</time>
                 </div>
               </li>
             </ul>
@@ -69,7 +69,7 @@
                 <img v-bind:src="contact.avatar" alt="">
               <div>
               <h4>{{ contact.name }}</h4>
-              <small>Ultimo accesso <time>{{ contact.date }}</time></small>
+              <small>Ultimo accesso <time>{{ contact.lastDate }}</time></small>
               </div>
             </div>
             <ul>
@@ -80,15 +80,18 @@
           </div>
           <div id="chat-main" class="clearfix">
             <!-- visualizzazione messaggi inviati e ricevuti-->
-            <div class="message" v-for="message in contacts[activeUser].messages" v-on:click="">
+            <div class="message" v-for="message in contacts[activeUser].messages">
               <div :class="(message.status == 'sent') ? 'sent' : 'received'">
                 <p>{{ message.text }}</p>
                 <time>{{ message.date }}</time>
-                <span><i class="fas fa-angle-down"></i></span>
-                <span class="dropdown">
-                  <small>info messaggio</small>
-                  <small>cancella messaggio</small>
+                <span v-on:click="show = !show" > <i class="fas fa-angle-down"></i>
                 </span>
+                  <transition name="fade">
+                    <span v-if="show"class="dropdown">
+                      <small>info messaggio</small>
+                      <small v-on:click="remove">cancella messaggio</small>
+                    </span>
+                  </transition>
               </div>
             </div>
           </div>
