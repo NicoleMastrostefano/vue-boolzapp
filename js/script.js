@@ -7,8 +7,7 @@ data:{
 		avatar: "img/avatar-2.png",
     text: 'Tutto fatto!',
     date: '10/01/2020 16:15:22',
-
-		// visible: true,
+		visible: true,
 		messages: [
 			{
 				date: '10/01/2020 15:30:55',
@@ -32,8 +31,7 @@ data:{
 		avatar: "img/avatar3.png",
     text: 'Mi piacerebbe ma devo andare...',
     date: '20/03/2020 16:35:00',
-
-		// visible: true,
+		visible: true,
 		messages: [
 			{
 				date: '20/03/2020 16:30:00',
@@ -57,7 +55,7 @@ data:{
 		avatar: 'img/avatar5.png',
     text: 'Ah scusa!',
     date: '28/03/2020 16:15:22',
-		// visible: true,
+		visible: true,
 		messages: [
 			{
 				date: '28/03/2020 10:10:40',
@@ -81,7 +79,7 @@ data:{
 		avatar: 'img/avatar4.png',
     text: 'Si, ma preferirei andare al cinema',
     date: '10/01/2020 15:50:00',
-		// visible: true,
+		visible: true,
 		messages: [
 			{
 				date: '10/01/2020 15:30:55',
@@ -98,18 +96,19 @@ data:{
 ],
 
   newMessage : "",
-  messages:[],
+  chat:[],
   activeUser: 0,
 
 },
 
   methods:{
     SendMessage: function () {
-      this.messages.push({
+      this.chat.push({
       text: this.newMessage,
-      date: moment()
+      date: moment(),
       })
       this.newMessage = " "
+
     },
   }
 })

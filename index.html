@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <title></title>
+    <title>Boolzapp</title>
   </head>
   <body>
     <div id="bg">
@@ -81,10 +81,10 @@
                 <time>{{ message.date }}</time>
               </div>
             </div>
-            <div class="newMsg" v-for="message in messages">
-              <!-- v-if="?" -->
+            <div class="newMsg" v-for="message in chat">
+              <!-- v-if="selezionare activeUser" -->
               <span>{{ message.text }}
-               <time>{{message.date.format("kk:mm")}}</time>
+              <time>{{ message.date.format("kk:mm")}}</time>
              </span>
             </div>
           </div>
