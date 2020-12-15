@@ -43,12 +43,12 @@
           <div id="contacts-list">
             <ul>
               <!-- selezione user attivo -->
-              <li v-for="(contact, index) in filteredContact"
+              <li v-for="(contact, index) in filteredContacts"
               @click="SetActiveUser(index)"
               v-bind:class="(activeUser == index) ? 'activeUser' : 'null'">
                 <div id="contacts-list-flex">
                   <div id="name-avatar">
-                    <img v-bind:src="contact.avatar" alt="">
+                    <img v-bind:src="filteredContacts.avatar" alt="">
                     <div>
                     <h4>{{ contact.name }}</h4>
                     <small>{{ contact.text }}</small>
@@ -66,10 +66,10 @@
         <div id="chat-container">
           <div id="chat-top">
             <div id="chat-top-avatar" >
-                <img :src=" contacts[activeUser].avatar">
+                <img :src=" filteredContacts[activeUser].avatar">
               <div>
-              <h4>{{ contacts[activeUser].name }}</h4>
-              <small>Ultimo accesso <time>{{ contacts[activeUser].lastDate }}</time></small>
+              <h4>{{ filteredContacts[activeUser].name }}</h4>
+              <small>Ultimo accesso <time>{{ filteredContacts[activeUser].lastDate }}</time></small>
               </div>
             </div>
             <ul>
@@ -80,7 +80,7 @@
           </div>
           <div id="chat-main" class="clearfix">
             <!-- visualizzazione messaggi inviati e ricevuti-->
-            <div class="message" v-for="message in contacts[activeUser].messages">
+            <div class="message" v-for="message in filteredContacts[activeUser].messages">
               <div :class="(message.status == 'sent') ? 'sent' : 'received'">
                 <p>{{ message.text }}</p>
                 <time>{{ message.date }}</time>

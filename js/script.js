@@ -110,7 +110,7 @@ data:{
 
     // funzione invio messaggio
     SendMessage: function () {
-      this.contacts[this.activeUser].messages.push({
+      this.filteredContacts[this.activeUser].messages.push({
       text: this.newMessage,
       date: moment().format("MM/DD/YYYY HH:mm:ss"),
       status:'sent',
@@ -121,7 +121,7 @@ data:{
 
     // funzione per cancellare messaggi dalla chat e dalla lista contatti
     remove: function (index,i) {
-      var thisContact = this.contacts[this.activeUser]
+      var thisContact = this.filteredContacts[this.activeUser]
       thisContact.messages.splice(i,1);
         if (thisContact.messages.length >= 1) {
           thisContact
@@ -137,7 +137,7 @@ data:{
 
     // funzione invio risposta
     SendAnswer: function () {
-      var thisContact = this.contacts[this.activeUser]
+      var thisContact = this.filteredContacts[this.activeUser]
       setTimeout(function () {
         thisContact.messages.push({
         text:"ok",
@@ -151,11 +151,11 @@ data:{
 
   computed: {
     // funzione search
-    filteredContact:function(){
+    filteredContacts:function(){
       return this.contacts.filter((el,name)=> {
         return el.name.toLowerCase().match(this.search)
       });
     }
   },
-}
-)
+
+})
