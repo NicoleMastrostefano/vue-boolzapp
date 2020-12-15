@@ -97,7 +97,7 @@ data:{
   newMessage : "",
   activeUser: 0,
   search:"",
-  show:false
+  activeToggle:-1
 },
 
 
@@ -105,7 +105,7 @@ data:{
 
     //funzione che seleziona il contatto attivo
     SetActiveUser: function(newIndex){
-      this.activeUser = newIndex
+      this.activeUser = newIndex;
     },
 
     // funzione invio messaggio
@@ -119,10 +119,15 @@ data:{
       this.SendAnswer()
     },
 
+    // funzione che seleziona il singolo messaggio
+    SetActiveToggle: function(index){
+      this.activeToggle = index
+    },
+
     // funzione per cancellare messaggi dalla chat e dalla lista contatti
-    remove: function (index,i) {
+    remove: function (index) {
       var thisContact = this.filteredContacts[this.activeUser]
-      thisContact.messages.splice(i,1);
+      thisContact.messages.splice(index,1);
         if (thisContact.messages.length >= 1) {
           thisContact
         } else {
@@ -130,10 +135,6 @@ data:{
         thisContact.lastDate = ' ';
         }
     },
-    // fare una funzione delete for each
-
-
-
 
     // funzione invio risposta
     SendAnswer: function () {
@@ -152,9 +153,12 @@ data:{
   computed: {
     // funzione search
     filteredContacts:function(){
-      return this.contacts.filter((el,name)=> {
-        return el.name.toLowerCase().match(this.search)
+      var filtered = this.contacts.filter(
+        (el,name) => {
+        return el.name.toLowerCase().match(this.search);
       });
+      console.log(filtered);
+      return filtered;
     }
   },
 

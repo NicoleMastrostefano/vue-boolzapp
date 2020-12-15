@@ -257,10 +257,12 @@ time {
   color:#EAEAEA;
   opacity: 0.5;
   cursor:pointer;
-
+  display: block;
 }
 .message i:hover{
   color: black;
+  display: block
+
 }
 
 .dropdown {
