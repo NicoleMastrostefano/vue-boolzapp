@@ -94,7 +94,7 @@ body {
 }
 
 #chat-bottom input {
-  width: 100%;
+  width: 85%;
   height: 35px;
   border: 1px solid white;
   border-radius: 4px;

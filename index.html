@@ -81,7 +81,7 @@
           <div id="chat-main" class="clearfix">
             <!-- visualizzazione messaggi inviati e ricevuti-->
             <div class="message" v-for="message in filteredContacts[activeUser].messages">
-              <div :class="(message.status == 'sent') ? 'sent' : 'received'">
+              <div :class="message.status">
                 <p>{{ message.text }}</p>
                 <time>{{ message.date }}</time>
                 <span v-on:click="show = !show" > <i class="fas fa-angle-down"></i>
