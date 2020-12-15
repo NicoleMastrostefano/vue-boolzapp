@@ -251,36 +251,42 @@ time {
 }
 
 .message i {
-  font-size: 20px;
+  font-size: 15px;
   position: absolute;
   left:260px;
   top: calc(100% - 30px - 15px);
   color:#D3D3D3;
   opacity: 0.5;
   cursor:pointer;
+  display: none;
 }
 
-.message i:hover{
+.message:hover i{
   color: black;
+  display: block;
 }
 
 .dropdown {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 10px;
+  padding: 15px 5px;
   position: absolute;
   width: 130px;
-  height: 90px;
   background-color: white;
   right:10px;
   top: calc(100% - 35px);
   z-index: 2;
   border: 1px solid #F2F2F2;
   border-radius: 2px;
+  display: none;
  }
 
- .dropdown small {
-   cursor: pointer;
+.message em:hover .dropdown {
+  display: block;
+}
+
+.dropdown small {
+  cursor: pointer;
  }
+
+.dropdown small:hover{
+  color:grey;
+}

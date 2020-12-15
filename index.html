@@ -84,13 +84,13 @@
               <div :class="message.status">
                 <p>{{ message.text }}</p>
                 <time>{{ message.date }}</time>
-                <span v-on:click="SetActiveToggle(index)"v-bind:class="activeToggle">
-                <i class="fas fa-angle-down"></i>
-                </span>
-                  <span v-if="(activeToggle == index)"class="dropdown">
-                    <small>info messaggio</small>
-                    <small v-on:click="remove(index)">cancella messaggio</small>
+                <em>
+                  <i class="fas fa-angle-down"></i>
+                  <span class="dropdown">
+                    <small>Info messaggio</small>
+                    <small @click="remove(index)">Cancella messaggio</small>
                   </span>
+                </em>
               </div>
             </div>
           </div>

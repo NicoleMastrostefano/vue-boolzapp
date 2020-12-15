@@ -93,14 +93,12 @@ data:{
   newMessage : "",
   activeUser: 0,
   search:"",
-  activeToggle:-1,
-
 },
 
 
   methods:{
 
-    //funzione che seleziona il contatto attivo
+    //funzione per selezionare il contatto attivo
     SetActiveUser: function(newIndex){
       this.activeUser = newIndex;
     },
@@ -116,11 +114,6 @@ data:{
       this.SendAnswer()
     },
 
-    // funzione che seleziona il singolo messaggio
-    SetActiveToggle: function(index){
-      this.activeToggle = index;
-    },
-
     // funzione per cancellare messaggi dalla chat e dalla lista contatti
     remove: function (index) {
       var thisContact = this.filteredContacts[this.activeUser]
@@ -130,7 +123,7 @@ data:{
         } else {
             thisContact.text = ' ';
             thisContact.lastDate = ' ';
-          } this.activeToggle = -1;
+          }
     },
 
     // funzione invio risposta
