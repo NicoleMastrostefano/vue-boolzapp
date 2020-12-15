@@ -97,7 +97,8 @@ data:{
   newMessage : "",
   activeUser: 0,
   search:"",
-  activeToggle:-1
+  activeToggle:-1,
+
 },
 
 
@@ -121,8 +122,9 @@ data:{
 
     // funzione che seleziona il singolo messaggio
     SetActiveToggle: function(index){
-      this.activeToggle = index
+      this.activeToggle = index;
     },
+
 
     // funzione per cancellare messaggi dalla chat e dalla lista contatti
     remove: function (index) {
@@ -133,7 +135,7 @@ data:{
         } else {
         thisContact.text = ' ';
         thisContact.lastDate = ' ';
-        }
+      } this.activeToggle = -1;
     },
 
     // funzione invio risposta
@@ -158,6 +160,7 @@ data:{
         return el.name.toLowerCase().match(this.search);
       });
       console.log(filtered);
+      console.log(this.search);
       return filtered;
     }
   },

@@ -257,12 +257,10 @@ time {
   color:#EAEAEA;
   opacity: 0.5;
   cursor:pointer;
-  display: block;
+
 }
 .message i:hover{
   color: black;
-  display: block
-
 }
 
 .dropdown {
@@ -286,9 +284,9 @@ time {
    cursor: pointer;
  }
 
- .fade-enter-active, .fade-leave-active {
+ /* .fade-enter-active, .fade-leave-active {
    transition: 0.5s;
- }
+ } */
 
  .fade-enter, .fade-leave-to {
    opacity: 0;
