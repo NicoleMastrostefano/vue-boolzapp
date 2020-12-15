@@ -44,7 +44,7 @@
             <ul>
               <!-- selezione user attivo -->
               <li v-for="(contact, index) in filteredContact"
-              @click="activeUser = index"
+              @click="SetActiveUser(index)"
               v-bind:class="(activeUser == index) ? 'activeUser' : 'null'">
                 <div id="contacts-list-flex">
                   <div id="name-avatar">
@@ -65,11 +65,11 @@
         <!-- chat container -->
         <div id="chat-container">
           <div id="chat-top">
-            <div id="chat-top-avatar" v-for="(contact, index) in contacts" v-if="(activeUser == index)">
-                <img v-bind:src="contact.avatar" alt="">
+            <div id="chat-top-avatar" >
+                <img :src=" contacts[activeUser].avatar">
               <div>
-              <h4>{{ contact.name }}</h4>
-              <small>Ultimo accesso <time>{{ contact.lastDate }}</time></small>
+              <h4>{{ contacts[activeUser].name }}</h4>
+              <small>Ultimo accesso <time>{{ contacts[activeUser].lastDate }}</time></small>
               </div>
             </div>
             <ul>
@@ -98,11 +98,12 @@
           <div id="chat-bottom">
             <i class="far fa-smile"></i>
             <!-- invio messaggio all'enter -->
-            <form @submit.prevent="SendMessage">
+            <!-- <form @submit.prevent="SendMessage"> -->
               <input type="text"
               v-model ="newMessage"
-              placeholder="Scrivi un messaggio">
-            </form>
+              placeholder="Scrivi un messaggio"
+              @keydown.enter="SendMessage">
+            <!-- </form> -->
             <i class="fas fa-microphone"></i>
           </div>
         </div>

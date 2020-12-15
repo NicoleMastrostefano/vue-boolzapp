@@ -102,6 +102,12 @@ data:{
 
 
   methods:{
+
+    //funzione che seleziona il contatto attivo
+    SetActiveUser: function(newIndex){
+      this.activeUser = newIndex
+    },
+
     // funzione invio messaggio
     SendMessage: function () {
       this.contacts[this.activeUser].messages.push({
@@ -140,9 +146,6 @@ data:{
       });
       }, 1500);
     },
-      mounted () {
-      this.SendAnswer()
-    }
   },
 
 
