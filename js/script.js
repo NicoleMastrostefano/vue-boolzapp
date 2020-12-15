@@ -7,7 +7,6 @@ data:{
 		avatar: "img/avatar-2.png",
     text: 'Tutto fatto!',
     lastDate: '10/01/2020 16:15:22',
-		visible: true,
 		messages: [
 			{
 				date: '10/01/2020 15:30:55',
@@ -31,7 +30,6 @@ data:{
 		avatar: "img/avatar3.png",
     text: 'Mi piacerebbe ma devo andare...',
     lastDate: '20/03/2020 16:35:00',
-		visible: true,
 		messages: [
 			{
 				date: '20/03/2020 16:30:00',
@@ -55,7 +53,6 @@ data:{
 		avatar: 'img/avatar5.png',
     text: 'Ah scusa!',
     lastDate: '28/03/2020 16:15:22',
-		visible: true,
 		messages: [
 			{
 				date: '28/03/2020 10:10:40',
@@ -79,7 +76,6 @@ data:{
 		avatar: 'img/avatar4.png',
     text: 'Si, ma preferirei andare al cinema',
     lastDate: '10/01/2020 15:50:00',
-		visible: true,
 		messages: [
 			{
 				date: '10/01/2020 15:30:55',
@@ -112,9 +108,9 @@ data:{
     // funzione invio messaggio
     SendMessage: function () {
       this.filteredContacts[this.activeUser].messages.push({
-      text: this.newMessage,
-      date: moment().format("MM/DD/YYYY HH:mm:ss"),
-      status:'sent',
+        text: this.newMessage,
+        date: moment().format("MM/DD/YYYY HH:mm:ss"),
+        status:'sent',
       })
       this.newMessage = " "
       this.SendAnswer()
@@ -125,17 +121,16 @@ data:{
       this.activeToggle = index;
     },
 
-
     // funzione per cancellare messaggi dalla chat e dalla lista contatti
     remove: function (index) {
       var thisContact = this.filteredContacts[this.activeUser]
       thisContact.messages.splice(index,1);
         if (thisContact.messages.length >= 1) {
-          thisContact
+            thisContact
         } else {
-        thisContact.text = ' ';
-        thisContact.lastDate = ' ';
-      } this.activeToggle = -1;
+            thisContact.text = ' ';
+            thisContact.lastDate = ' ';
+          } this.activeToggle = -1;
     },
 
     // funzione invio risposta
@@ -157,11 +152,9 @@ data:{
     filteredContacts:function(){
       var filtered = this.contacts.filter(
         (el,name) => {
-        return el.name.toLowerCase().match(this.search);
+          return el.name.toLowerCase().match(this.search);
       });
-      console.log(filtered);
-      console.log(this.search);
-      return filtered;
+        return filtered;
     }
   },
 

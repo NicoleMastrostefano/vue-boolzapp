@@ -248,17 +248,18 @@ time {
 #chat-main .message time {
   position: absolute;
   left: 180px;
-
 }
+
 .message i {
+  font-size: 20px;
   position: absolute;
   left:260px;
   top: calc(100% - 30px - 15px);
-  color:#EAEAEA;
+  color:#D3D3D3;
   opacity: 0.5;
   cursor:pointer;
-
 }
+
 .message i:hover{
   color: black;
 }
@@ -282,12 +283,4 @@ time {
 
  .dropdown small {
    cursor: pointer;
- }
-
- /* .fade-enter-active, .fade-leave-active {
-   transition: 0.5s;
- } */
-
- .fade-enter, .fade-leave-to {
-   opacity: 0;
  }

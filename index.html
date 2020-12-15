@@ -66,7 +66,7 @@
         <div id="chat-container">
           <div id="chat-top">
             <div id="chat-top-avatar" >
-                <img :src=" filteredContacts[activeUser].avatar">
+                <img :src="filteredContacts[activeUser].avatar">
               <div>
               <h4>{{ filteredContacts[activeUser].name }}</h4>
               <small>Ultimo accesso <time>{{ filteredContacts[activeUser].lastDate }}</time></small>
@@ -87,12 +87,10 @@
                 <span v-on:click="SetActiveToggle(index)"v-bind:class="activeToggle">
                 <i class="fas fa-angle-down"></i>
                 </span>
-                  <transition name="fade">
-                    <span v-if="(activeToggle == index)"class="dropdown">
-                      <small>info messaggio</small>
-                      <small v-on:click="remove(index)">cancella messaggio</small>
-                    </span>
-                  </transition>
+                  <span v-if="(activeToggle == index)"class="dropdown">
+                    <small>info messaggio</small>
+                    <small v-on:click="remove(index)">cancella messaggio</small>
+                  </span>
               </div>
             </div>
           </div>
