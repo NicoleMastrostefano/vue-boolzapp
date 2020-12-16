@@ -278,6 +278,7 @@ time {
 
 .dropdown small {
   cursor: pointer;
+  display: inline-block;
  }
 
 .dropdown small:hover{
