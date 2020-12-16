@@ -191,8 +191,7 @@ img {
   float:left;
 }
 
-.newMsg span {
-  float: right;
+#chat-main.message  {
   word-break: break-all;
 }
 
@@ -204,7 +203,7 @@ img {
   background-color: #D5F9BA;
 }
 
-.newMsg span::after,
+
 #chat-main .message > .sent::after {
 	content: '';
 	position: absolute;
@@ -237,12 +236,6 @@ img {
 
 time {
   font-size: 10px;
-}
-
-#chat-main .newMsg time {
-  display: block;
-  position: absolute;
-  left: 250px;
 }
 
 #chat-main .message time {
