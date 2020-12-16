@@ -191,7 +191,7 @@ img {
   float:left;
 }
 
-#chat-main.message  {
+#chat-main .message  {
   word-break: break-all;
 }
 
@@ -205,32 +205,32 @@ img {
 
 
 #chat-main .message > .sent::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 10px solid transparent;
-	border-top-color: #D5F9BA;
-	border-bottom: 0;
-	margin-left: 80px;
-	margin-bottom: -10px;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #D5F9BA;
+  border-bottom: 0;
+  margin-left: 80px;
+  margin-bottom: -10px;
   filter: drop-shadow(1px 1px rgba(0.5, 0.5, 0.5, 0.1));
 }
 
 #chat-main .message > .received:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 10px solid transparent;
-	border-bottom-color:white;
-	border-top: 0;
-	margin-left: -100px;
-	margin-top: -10px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color:white;
+  border-top: 0;
+  margin-left: -100px;
+  margin-top: -10px;
   filter: drop-shadow(-1px -1px rgba(0.5, 0.5, 0.5, 0.1));
 }
 
